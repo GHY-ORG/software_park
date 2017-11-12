@@ -4,25 +4,28 @@
 }
 
 .article-title>h1 {
-    margin-left: 15px;
+    text-align: center;
     color: #469ab5;
 }
 
-.article-title .article-info {
+.article-info {
+    text-align: center;
     color: #969696;
 }
 
-.article-title .article-info>p {
-    font-size: 16px;
+.article-info>p {
     display: inline-block;
     margin-right: 15px;
     margin-bottom: 10px;
+    font-size: 16px;
 }
 
-.article-title .article-info>p:last-child {
+.article-info>p:last-child {
     margin-right: 0;
 }
 
 .article-content {
     padding: 25px 30px;
+    max-width: 860px;
+    margin: 0 auto;
 }

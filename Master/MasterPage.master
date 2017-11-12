@@ -20,9 +20,9 @@
     <link rel="shortcut icon" href="/favicon.ico" type="img/x-icon" />
     <link rel="icon" href="/favicon.ico" type="img/x-icon" />
     <link rel="shortcut icon" href="/favicon.ico" type="img/x-icon" />
-    <link rel="stylesheet" href="/Statics/css/normalize.css" />
+    <link rel="stylesheet" href="/Statics/css/normalize.min.css?v=20171102" />
     <link rel="stylesheet" href="/Statics/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/Statics/css/global.css?v=20171102" />
+    <link rel="stylesheet" href="/Statics/css/global.min.css?v=20171102" />
     <title></title>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -39,7 +39,7 @@
     </form>
     <script src="/Statics/js/jquery-3.2.1.min.js"></script>
     <script src="/Statics/js/bootstrap.min.js"></script>
-    <script src="/Statics/js/global.js?v=20170919"></script>
+    <script src="/Statics/js/global.min.js?v=20171102"></script>
     <asp:ContentPlaceHolder ID="js" runat="server">
 
     </asp:ContentPlaceHolder>

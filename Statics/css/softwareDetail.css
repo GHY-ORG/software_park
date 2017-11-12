@@ -35,8 +35,8 @@
 }
 
 .panel-info-brief .panel-body>h3 {
-    font-size: 26px;
     margin: 4px 0 0;
+    font-size: 26px;
 }
 
 .panel-info-brief .btn {
@@ -45,7 +45,6 @@
 }
 
 .panel-info-brief .panel-software-tag {
-    font-size: 14px;
     margin: 4px 2px;
     padding: 5px 12px;
     letter-spacing: 1px;
@@ -53,6 +52,7 @@
     border: 1px solid #156077;
     border-radius: 5px;
     background-color: transparent;
+    font-size: 14px;
 }
 
 .panel-footer .panel-software-tag:hover {
@@ -71,8 +71,8 @@
 }
 
 .panel-subtitle>h4 {
-    line-height: 25.6px;
     margin: 0 20px 0 10px;
+    line-height: 25.6px;
 }
 
 .vertical-separator {
@@ -96,9 +96,10 @@
 .panel-software-content .panel-body {
     padding-top: 0;
 }
-.panel-software-content .panel-body{
-    padding-left:40px;
-    padding-right:40px;
+
+.panel-software-content .panel-body {
+    padding-right: 40px;
+    padding-left: 40px;
 }
 
 .carousel-inner .item>img {
@@ -112,9 +113,9 @@
 }
 
 .carousel-control .glyphicon {
-    font-size: 50px;
     top: calc(50% - 25px);
     width: 50px;
     height: 50px;
     color: #3d6884;
+    font-size: 50px;
 }

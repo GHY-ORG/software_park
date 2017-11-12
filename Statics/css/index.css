@@ -46,15 +46,15 @@
 }
 
 .panel-heading .panel-dynamic-title p {
-    font-size: 22px;
     word-break: break-all;
+    font-size: 22px;
 }
 
 .panel-heading .panel-dynamic-time {
-    font-size: 14px;
     float: left;
     margin: 30px 0 0 15px;
     color: #63656a;
+    font-size: 14px;
 }
 
 .panel-body .panel-dynamic-banner {
@@ -69,17 +69,17 @@
 }
 
 .panel-body .panel-dynamic-content {
-    font-size: 18px;
     float: left;
     width: 50%;
     padding: 15px;
     text-indent: 2em;
+    font-size: 18px;
 }
 
-    .panel-body .panel-dynamic-content > a,
-    .panel-body .panel-dynamic-content > a:hover{
-        color: #63656a;
-    }
+.panel-body .panel-dynamic-content>a,
+.panel-body .panel-dynamic-content>a:hover {
+    color: #63656a;
+}
 
 .panel-footer {
     padding: 0 10px 10px;
@@ -98,9 +98,9 @@
 }
 
 .panel-footer .panel-dynamic-viewtimes {
-    font-size: 16px;
     text-align: right;
     color: #63656a;
+    font-size: 16px;
 }
 
 .panel-footer .panel-dynamic-viewtimes .glyphicon-eye-open {
@@ -120,25 +120,28 @@
     color: #469ab5;
     border: 1px solid #469ab5;
 }
+
 #dynamic-end {
     position: relative;
-    text-align: center;
     margin-bottom: 15px;
+    text-align: center;
 }
-    #dynamic-end > p {
-        position: relative;
-        z-index: 10;
-        display: inline-block;
-        margin: 0;
-        padding: 0 10px;
-        color: #737474;
-        background: #f2f2f2;
-    }
-    #dynamic-end .dynamic-end-line {
-        position: absolute;
-        top: 10px;
-        left: 10%;
-        width: 80%;
-        height: 1px;
-        background: #737474;
-    }
+
+#dynamic-end>p {
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    margin: 0;
+    padding: 0 10px;
+    color: #737474;
+    background: #f2f2f2;
+}
+
+#dynamic-end .dynamic-end-line {
+    position: absolute;
+    top: 10px;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: #737474;
+}
