@@ -138,25 +138,6 @@
     bottom: 0;
 }
 
-.taptap-icon {
-    display: inline-block;
-    vertical-align: middle;
-    background: url(../img/main_icons.png) no-repeat;
-    background-size: 52px;
-}
-
-.taptap-icon.icon-quote-left,
-.taptap-icon.icon-quote-right {
-    width: 20px;
-    height: 20px;
-    background-position: 0 -200px;
-}
-
-.taptap-icon.icon-quote-right {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-}
-
 .item-block-content .block-content-uploadtime {
     font-size: 16px;
     margin: 0;

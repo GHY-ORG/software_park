@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Master/MasterPage.master" AutoEventWireup="true" CodeFile="pickupList.aspx.cs" Inherits="pages_pickupList" Title="软件园·P!CKUP" %>
 
 <asp:Content ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" href="/Statics/css/pickupList.css?v=20170919" />
+    <link rel="stylesheet" href="/Statics/css/pickupList.css?v=20171102" />
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="body" runat="server">

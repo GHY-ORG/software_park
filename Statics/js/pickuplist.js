@@ -22,7 +22,7 @@ function getMorePickup(start, count) {
                     '           <div class="item-title-text"><a href="pickupDetail.aspx?id=' + item.PickupID + '">' + item.PickupCommendItem + '</a></div>' +
                     '       </div>' +
                     '       <div class="item-block-content">' +
-                    '           <div class="block-content-text"><a href="pickupDetail.aspx?id=' + item.PickupID + '"><p>' + item.PickupCommendContent + '</p></a><i class="taptap-icon icon-quote-left"></i><i class="taptap-icon icon-quote-right"></i></div>' +
+                    '           <div class="block-content-text"><a href="pickupDetail.aspx?id=' + item.PickupID + '"><p>' + item.PickupCommendContent + '</p></a><i class="my-icon icon-quote-left"></i><i class="my-icon icon-quote-right"></i></div>' +
                     '           <p class="block-content-uploadtime">' + item.PickupUploadTime + '</p>' +
                     '       </div>' +
                     '   </div>' +
