@@ -1,0 +1,28 @@
+﻿@charset 'UTF-8';
+.article-title {
+    border-bottom: 2px solid #eaeaea;
+}
+
+.article-title>h1 {
+    margin-left: 15px;
+    color: #469ab5;
+}
+
+.article-title .article-info {
+    color: #969696;
+}
+
+.article-title .article-info>p {
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.article-title .article-info>p:last-child {
+    margin-right: 0;
+}
+
+.article-content {
+    padding: 25px 30px;
+}

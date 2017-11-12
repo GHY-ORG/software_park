@@ -1,0 +1,10 @@
+﻿#ArticleContentTextBox{
+    min-height:500px;
+}
+.modal-body {
+    overflow-y: auto;
+    height:400px;
+}
+.selected {
+    background: #0073aa;
+}
