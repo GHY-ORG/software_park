@@ -13,13 +13,10 @@
                             <span>你的位置:</span>
                         </li>
                         <li>
-                            <a href="index.aspx">首页</a>
-                        </li>
-                        <li>
-                            <a href="softwareList.aspx">软件</a>
+                            <a href="/pages/softwareList.aspx">软件</a>
                         </li>
                         <li class="active">
-                            <a href="softwareDetail.aspx?id=<%=ArticleID %>">
+                            <a href="/pages/softwareDetail.aspx?id=<%=ArticleID %>">
                                 <%=SoftwareName %>&<%=SoftwareEdition %>
                             </a>
                         </li>

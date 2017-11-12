@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Master_MasterPage" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" %>
 <%@ Register TagPrefix="SoftwarePark" TagName="Header" Src="~/Controls/header.ascx"%>
 <%@ Register TagPrefix="SoftwarePark" TagName="Footer" Src="~/Controls/footer.ascx"%>
 <%@ Register TagPrefix="SoftwarePark" TagName="ContactUsModal" Src="~/Controls/contactUsModal.ascx" %>
