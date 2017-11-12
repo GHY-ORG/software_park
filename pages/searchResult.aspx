@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Master/MasterPage.master" AutoEventWireup="true" CodeFile="searchResult.aspx.cs" Inherits="pages_searchResult" Title="软件园·搜索结果" %>
 
     <asp:Content ContentPlaceHolderID="head" runat="server">
-        <link rel="stylesheet" href="/css/index.css?v=20170919" />
+        <link rel="stylesheet" href="/Statics/css/index.css?v=20170919" />
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="body" runat="server">
@@ -37,5 +37,5 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="js" runat="server">
-        <script src="/js/searchResult.js?v=20170919"></script>
+        <script src="/Statics/js/searchResult.js?v=20170919"></script>
     </asp:Content>

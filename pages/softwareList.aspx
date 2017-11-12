@@ -1,8 +1,8 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Master/MasterPage.master" AutoEventWireup="true" CodeFile="softwareList.aspx.cs" Inherits="pages_softwareList" Title="软件园·软件" %>
 
     <asp:Content ContentPlaceHolderID="head" runat="server">
-        <link rel="stylesheet" href="/css/softwareList.css?v=20170919" />
-        <link rel="stylesheet" href="/css/swiper-3.4.2.min.css" />
+        <link rel="stylesheet" href="/Statics/css/softwareList.css?v=20170919" />
+        <link rel="stylesheet" href="/Statics/css/swiper-3.4.2.min.css" />
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="body" runat="server">
@@ -85,7 +85,7 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="js" runat="server">
-        <script src="/js/swiper-3.4.2.jquery.min.js"></script>
+        <script src="/Statics/js/swiper-3.4.2.jquery.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
                 var swiper = new Swiper('.swiper-container', {

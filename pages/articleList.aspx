@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Master/MasterPage.master" AutoEventWireup="true" CodeFile="articleList.aspx.cs" Inherits="pages_articleList" Title="软件园·文章" %>
 
     <asp:Content ContentPlaceHolderID="head" runat="server">
-        <link rel="stylesheet" href="../css/articleList.css?v=20170919" />
+        <link rel="stylesheet" href="/Statics/css/articleList.css?v=20170919" />
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="body" runat="server">
