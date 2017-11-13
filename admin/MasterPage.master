@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/Statics/css/normalize.min.css" />
+    <link rel="stylesheet" href="/Statics/css/bootstrap.min.css" />
+    <title>Software Park Admin v1.0</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="BaseForm" runat="server">
+        <div class="container">
+            <asp:ContentPlaceHolder id="body" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <script src="/Statics/js/jquery-3.2.1.min.js"></script>
+    <script src="/Statics/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="js" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

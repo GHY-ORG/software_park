@@ -163,13 +163,14 @@ public partial class admin_pages_articleEdit : System.Web.UI.Page
         {
             if (this.ClassCheckBoxList.Items[i].Selected)
             {
-                string strSQL = "SELECT * FROM ClassMap WHERE ClassID = @ClassID AND ArticleID = @ArticleID";
+                string strSQL;
                 SqlParameter[] paras = new SqlParameter[] {
                     new SqlParameter("@ClassID",this.ClassCheckBoxList.Items[i].Value),
                     new SqlParameter("@ArticleID",ArticleID)
                 };
-                strSQL = "INSERT INTO ClassMap(ClassID,ArticleID) VALUES(@ClassID,@ArticleID)";
-                DAL.SQLHelper.ExcuteSQL(strSQL, paras);
+
+                    strSQL = "INSERT INTO ClassMap(ClassID,ArticleID) VALUES(@ClassID,@ArticleID)";
+                    DAL.SQLHelper.ExcuteSQL(strSQL, paras);
             }
         }
     }

@@ -17,9 +17,16 @@ public partial class admin_pages_articleList : System.Web.UI.Page
         }
         else
         {
-            PageSize = 20;
+            PageSize = 1;
             if (!IsPostBack)
             {
+                CurrentPage = 0;
+                ViewState["PageIndex"] = 0;
+                RecordCount = CalculateRecord();//计算总共有多少记录
+                PageCount = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(RecordCount) / PageSize));//计算总共有多少页
+                ViewState["PageCount"] = PageCount;
+                LablePageCount.Text = PageCount.ToString();
+                LableRecordCount.Text = RecordCount.ToString();
                 DataListBind();
             }
         }
@@ -122,13 +129,6 @@ public partial class admin_pages_articleList : System.Web.UI.Page
             LinkBtnPrevPage.Enabled = false;
         }
         LableCurrentPage.Text = (CurrentPage + 1).ToString();
-        CurrentPage = 0;
-        ViewState["PageIndex"] = 0;
-        RecordCount = CalculateRecord();//计算总共有多少记录
-        LableRecordCount.Text = RecordCount.ToString();
-        PageCount = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(RecordCount) / PageSize));//计算总共有多少页
-        LablePageCount.Text = PageCount.ToString();
-        ViewState["PageCount"] = PageCount;
     }
 
     public string ReturnClass(int Class)
