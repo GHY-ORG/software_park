@@ -40,5 +40,5 @@
     </div>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="js" runat="server">
-    <script src="/Statics/js/index.min.js?v=20171102"></script>
+    <script src="/Statics/js/index.min.js?v=20171113"></script>
 </asp:Content>

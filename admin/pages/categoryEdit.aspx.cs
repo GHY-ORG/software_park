@@ -7,8 +7,8 @@ using System.Web.UI.WebControls;
 
 public partial class admin_pages_categoryEdit : System.Web.UI.Page
 {
-    string selVal = "";
-    int PageSize, RecordCount, PageCount, CurrentPage;
+    static string selVal = "";
+
     string ClassID, ClassName;
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -18,7 +18,6 @@ public partial class admin_pages_categoryEdit : System.Web.UI.Page
         }
         else
         {
-            PageSize = 20;
             if (!IsPostBack)
             {
                 if (Request.QueryString["id"] != null)
@@ -32,76 +31,21 @@ public partial class admin_pages_categoryEdit : System.Web.UI.Page
                 }
                 selVal = "WHERE ID IN (SELECT ArticleID FROM ClassMap WHERE ClassID='" + ClassID + "')";
                 DataListBind();
+                selVal = null;
             }
         }
     }
     //用于绑定DataList控件
     public void DataListBind()
     {
-        ArticleRepeater.DataSource = CreateSource();
+        Pager.SQLCondition = selVal;
+        ArticleRepeater.DataSource = Pager.CreatSource();
         ArticleRepeater.DataBind();
-        PageState();
     }
 
-    //计算总共有多少条记录
-    public int CalculateRecord()
+    protected void Pager_OnPageIndexChanged(object sender, EventArgs e)
     {
-        string strSQL = "SELECT COUNT(*) FROM Article " + selVal;
-        DataTable dt = DAL.SQLHelper.GetTable(strSQL);
-        return Int32.Parse(dt.Rows[0][0].ToString());
-    }
-
-    ICollection CreateSource()
-    {
-        int StartIndex;
-        //设定导入的起终地址
-        StartIndex = CurrentPage * PageSize;
-        SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["ConnectionString"].ToString());
-        string strSQL = "SELECT * FROM Article " + selVal;
-        DataSet ds = new DataSet();
-        SqlDataAdapter sda = new SqlDataAdapter(strSQL, conn);
-        sda.Fill(ds, StartIndex, PageSize, "ArticleRepeater");
-        return ds.Tables["ArticleRepeater"].DefaultView;
-    }
-
-    public void Page_OnClick(Object sender, CommandEventArgs e)
-    {
-        CurrentPage = (int)ViewState["PageIndex"];
-        PageCount = (int)ViewState["PageCount"];
-        string cmd = e.CommandName;
-        //判断cmd，以判定翻页方向
-        switch (cmd)
-        {
-            case "next":
-                if (CurrentPage < (PageCount - 1)) CurrentPage++;
-                break;
-            case "prev":
-                if (CurrentPage > 0) CurrentPage--;
-                break;
-        }
-        ViewState["PageIndex"] = CurrentPage;
         DataListBind();
-    }
-    private void PageState()
-    {
-        LinkBtnNextPage.Enabled = true;
-        LinkBtnPrevPage.Enabled = true;
-        if (CurrentPage == (PageCount - 1))
-        {
-            LinkBtnNextPage.Enabled = false;
-        }
-        if (CurrentPage == 0)
-        {
-            LinkBtnPrevPage.Enabled = false;
-        }
-        LableCurrentPage.Text = (CurrentPage + 1).ToString();
-        CurrentPage = 0;
-        ViewState["PageIndex"] = 0;
-        RecordCount = CalculateRecord();//计算总共有多少记录
-        LableRecordCount.Text = RecordCount.ToString();
-        PageCount = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(RecordCount) / PageSize));//计算总共有多少页
-        LablePageCount.Text = PageCount.ToString();
-        ViewState["PageCount"] = PageCount;
     }
 
     public string ReturnClass(int Class)

@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/admin/MasterPage.master" AutoEventWireup="true" CodeFile="categoryEdit.aspx.cs" Inherits="admin_pages_categoryEdit" %>
+<%@ Register Src="~/Controls/pager.ascx" TagPrefix="SoftwarePark" TagName="Pager" %>
 <asp:Content ContentPlaceHolderID="body" runat="server">
     <h2>添加新分类目录</h2>
     <div class="form-inline">
@@ -61,16 +62,5 @@
             </asp:Repeater>
         </table>
     </div>
-    <ul class="pager">
-        <li>
-            <asp:LinkButton ID="LinkBtnPrevPage" Text="上一页" CommandName="prev" OnCommand="Page_OnClick" runat="server" />
-        </li>
-        <li>
-            <asp:LinkButton ID="LinkBtnNextPage" Text="下一页" CommandName="next" OnCommand="Page_OnClick" runat="server" />
-        </li>
-        共有
-        <asp:Label ID="LableRecordCount" runat="server" />条记录 当前为
-        <asp:Label ID="LableCurrentPage" runat="server" />/
-        <asp:Label ID="LablePageCount" runat="server" />页
-    </ul>
+    <SoftwarePark:Pager ID="Pager" runat="server" DatabaseTable="Article" PageSize="20" SQLCondition="" SQLOrder="ORDER BY StickState DESC, UploadTime DESC" OnPageIndexChanged="Pager_OnPageIndexChanged" />
 </asp:Content>

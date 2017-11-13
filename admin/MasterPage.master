@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/Statics/css/normalize.min.css" />
     <link rel="stylesheet" href="/Statics/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/global.css" />
     <title>Software Park Admin v1.0</title>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>

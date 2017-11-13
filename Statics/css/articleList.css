@@ -27,14 +27,3 @@
     color: #7c7d81;
     font-size: 17px;
 }
-
-.pagination>li>a {
-    width: 35px;
-    height: 35px;
-    margin-right: 5px;
-    margin-left: 5px;
-    color: #888;
-    border-radius: 12px !important;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
-    line-height: 23px;
-}

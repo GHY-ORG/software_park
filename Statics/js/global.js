@@ -27,12 +27,12 @@ jQuery(document).ready(function ($) {
 });
 $(document).ready(function () {
     $("#search-btn").click(function () {
-        location.href = "searchResult.aspx?searchcontent=" + $("#search-input").val() + "&searchclass=2";
+        location.href = "/pages/searchResult.aspx?searchcontent=" + $("#search-input").val() + "&searchclass=2";
     });
     $("#search-input").keydown(function (e) {
         if (e.keyCode == 13) {
             e.preventDefault();
-            location.href = "searchResult.aspx?searchcontent=" + $("#search-input").val() + "&searchclass=2";
+            location.href = "/pages/searchResult.aspx?searchcontent=" + $("#search-input").val() + "&searchclass=2";
         }
     });
 });
