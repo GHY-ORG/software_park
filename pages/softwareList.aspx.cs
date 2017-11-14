@@ -65,9 +65,4 @@ public partial class pages_softwareList : System.Web.UI.Page
         ClassRepeater.DataSource = Pager.CreatSource();
         ClassRepeater.DataBind();
     }
-
-    protected void Pager_OnPageIndexChanged(object sender, EventArgs e)
-    {
-        DataListBind();
-    }
 }

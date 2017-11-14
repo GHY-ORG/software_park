@@ -13,8 +13,11 @@ public partial class admin_pages_articleList : System.Web.UI.Page
         {
             Response.Redirect("noRight.html");
         }
+        if (!IsPostBack)
+        {
+            selVal = "";
+        }
     }
-
     protected void Page_LoadComplete(object sender, EventArgs e)
     {
         DataListBind();
@@ -26,11 +29,6 @@ public partial class admin_pages_articleList : System.Web.UI.Page
         Pager.SQLCondition = selVal;
         DataList1.DataSource = Pager.CreatSource();
         DataList1.DataBind();
-    }
-
-    protected void Pager_OnPageIndexChanged(object sender, EventArgs e)
-    {
-        DataListBind();
     }
 
     //设置置顶
@@ -117,8 +115,11 @@ public partial class admin_pages_articleList : System.Web.UI.Page
         if (SearchContent != null && SearchContent != "")
         {
             selVal = "WHERE Title like '%" + SearchContent + "%'";
-            DataListBind();
-            selVal = null;
+            Pager.CurrentPage = 0;
+        }
+        else
+        {
+            selVal = "";
         }
     }
 

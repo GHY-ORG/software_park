@@ -5,11 +5,16 @@ using System.Web.UI.WebControls;
 public partial class admin_pages_userList : System.Web.UI.Page
 {
     static string selVal = "";
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Role"] == null)
         {
             Response.Redirect("noRight.html");
+        }
+        if (!IsPostBack)
+        {
+            selVal = "";
         }
     }
     protected void Page_LoadComplete(object sender, EventArgs e)
@@ -23,11 +28,6 @@ public partial class admin_pages_userList : System.Web.UI.Page
         Pager.SQLCondition = selVal;
         DataList1.DataSource = Pager.CreatSource();
         DataList1.DataBind();
-    }
-
-    protected void Pager_OnPageIndexChanged(object sender, EventArgs e)
-    {
-        DataListBind();
     }
 
     //设置用户的管理员权限
@@ -75,8 +75,11 @@ public partial class admin_pages_userList : System.Web.UI.Page
         if (SearchContent != null && SearchContent !="")
         {
             selVal = "where RealName= '" + SearchContent + "' OR UserName like'%"  + SearchContent + "%'";
-            DataListBind();
-            selVal = null;
+            Pager.CurrentPage = 0;
+        }
+        else
+        {
+            selVal = "";
         }
     }
 }

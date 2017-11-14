@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI.WebControls;
 
@@ -15,8 +12,11 @@ public partial class admin_pages_bannerList : System.Web.UI.Page
         {
             Response.Redirect("noRight.html");
         }
+        if (!IsPostBack)
+        {
+            selVal = "";
+        }
     }
-
     protected void Page_LoadComplete(object sender, EventArgs e)
     {
         DataListBind();
@@ -28,11 +28,6 @@ public partial class admin_pages_bannerList : System.Web.UI.Page
         Pager.SQLCondition = selVal;
         DataList1.DataSource = Pager.CreatSource();
         DataList1.DataBind();
-    }
-
-    protected void Pager_OnPageIndexChanged(object sender, EventArgs e)
-    {
-        DataListBind();
     }
 
     //删除该条记录
@@ -60,8 +55,11 @@ public partial class admin_pages_bannerList : System.Web.UI.Page
         if (SearchContent != null && SearchContent != "")
         {
             selVal = "WHERE Description like '%" + SearchContent + "%'";
-            DataListBind();
-            selVal = null;
+            Pager.CurrentPage = 0;
+        }
+        else
+        {
+            selVal = "";
         }
     }
 }

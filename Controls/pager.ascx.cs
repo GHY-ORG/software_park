@@ -4,6 +4,7 @@ using System.Web.UI.WebControls;
 
 public partial class Controls_pager : System.Web.UI.UserControl
 {
+    private static int _CurrentPage, RecordCount, PageCount;
     private static string _DatabaseTable, _SQLCondition, _SQLOrder;
 
     public int PageSize { get; set; }
@@ -43,8 +44,18 @@ public partial class Controls_pager : System.Web.UI.UserControl
             _SQLOrder = value;
         }
     }
+    public int CurrentPage
+    {
+        get
+        {
+            return _CurrentPage;
+        }
 
-    static int CurrentPage, RecordCount, PageCount;
+        set
+        {
+            _CurrentPage = value;
+        }
+    }
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -76,20 +87,18 @@ public partial class Controls_pager : System.Web.UI.UserControl
 
     protected void GeneratePager()
     {
-        int PageNumListIndex = 0;
         string[] PageNumList;
         if (PageCount < 6)
         {
             PageNumList = new string[PageCount];
             for (int i = 1; i <= PageCount; i++)
             {
-                PageNumList[PageNumListIndex] = i.ToString();
-                PageNumListIndex++;
+                PageNumList[i - 1] = i.ToString();
             }
         }
         else if (PageCount == 6)
         {
-            if (CurrentPage == 4)
+            if (CurrentPage >= 3)
             {
                 PageNumList = new string[6] { "1", "...", "3", "4", "5", "6" };
             }
@@ -100,7 +109,7 @@ public partial class Controls_pager : System.Web.UI.UserControl
         }
         else
         {
-            if (CurrentPage <= 3)
+            if (CurrentPage < 3)
             {
                 PageNumList = new string[6] { "1", "2", "3", "4", "...", PageCount.ToString() };
             }
@@ -174,17 +183,6 @@ public partial class Controls_pager : System.Web.UI.UserControl
                     CurrentPage--;
                 }
                 break;
-        }
-    }
-
-    public delegate void PageIndexChangedEventHandler(object sender, EventArgs e);
-    public event PageIndexChangedEventHandler PageIndexChanged;
-    protected virtual void OnPageIndexChanged(EventArgs e)
-    {
-        PageIndexChangedEventHandler handler = PageIndexChanged;
-        if (handler != null)
-        {
-            handler(this, e);
         }
     }
 }

@@ -26,6 +26,16 @@
     <title></title>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
+    <script src="https://hm.baidu.com/hm.js?b69839076a87e524498f26787bed293a"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+             var hm = document.createElement("script");
+             hm.src = "https://hm.baidu.com/hm.js?b69839076a87e524498f26787bed293a";
+             var s = document.getElementsByTagName("script")[0]; 
+             s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
 <body>
     <form id="BaseForm" runat="server">

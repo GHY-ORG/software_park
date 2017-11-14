@@ -12,6 +12,10 @@ public partial class admin_pages_categoryList : System.Web.UI.Page
         {
             Response.Redirect("noRight.html");
         }
+        if (!IsPostBack)
+        {
+            selVal = "";
+        }
     }
     protected void Page_LoadComplete(object sender, EventArgs e)
     {
@@ -24,12 +28,6 @@ public partial class admin_pages_categoryList : System.Web.UI.Page
         ClassRepeater.DataSource = Pager.CreatSource();
         ClassRepeater.DataBind();
     }
-
-    protected void Pager_OnPageIndexChanged(object sender, EventArgs e)
-    {
-        DataListBind();
-    }
-
 
     //删除该条记录
     protected void DeleteLinkBtn_Click(object sender, EventArgs e)
@@ -68,9 +66,11 @@ public partial class admin_pages_categoryList : System.Web.UI.Page
         if (SearchContent != null && SearchContent != "")
         {
             selVal = "WHERE ClassName like '%" + SearchContent + "%'";
-            DataListBind();
-            selVal = null;
+            Pager.CurrentPage = 0;
+        }
+        else
+        {
+            selVal = "";
         }
     }
-
 }

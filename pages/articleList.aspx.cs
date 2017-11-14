@@ -13,11 +13,6 @@ public partial class pages_articleList : System.Web.UI.Page
         ArticleRepeater.DataBind();
     }
 
-    protected void Pager_OnPageIndexChanged(object sender, EventArgs e)
-    {
-        DataListBind();
-    }
-
     //将html格式转换为text且长度小于等于80
     public string returnContent(string content)
     {

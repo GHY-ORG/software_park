@@ -55,8 +55,7 @@
                 </ItemTemplate>
             </asp:Repeater>
             <!--翻页-->
-            <SoftwarePark:Pager ID="Pager" runat="server" DatabaseTable="Class" PageSize="4" SQLCondition="" SQLOrder="Order BY ID DESC"
-                OnPageIndexChanged="Pager_OnPageIndexChanged" />
+            <SoftwarePark:Pager ID="Pager" runat="server" DatabaseTable="Class" PageSize="4" SQLCondition="" SQLOrder="Order BY ID DESC" />
         </div>
     </div>
 </asp:Content>

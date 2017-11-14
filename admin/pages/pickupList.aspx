@@ -49,5 +49,5 @@
             </ItemTemplate>
         </asp:DataList>
     </div>
-    <SoftwarePark:Pager ID="Pager" runat="server" DatabaseTable="Pickup" PageSize="20" SQLCondition="" SQLOrder="ORDER BY ID" OnPageIndexChanged="Pager_OnPageIndexChanged" />
+    <SoftwarePark:Pager ID="Pager" runat="server" DatabaseTable="Pickup" PageSize="20" SQLCondition="" SQLOrder="ORDER BY ID" />
 </asp:Content>

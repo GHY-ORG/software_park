@@ -23,7 +23,7 @@
     <div class="container">
         <!--pickup标题-->
         <div class="pickup-title">
-            <h1>P!ICKUP</h1>
+            <h1>P!CKUP</h1>
             <p>P!ck新潮 Up热门</p>
             <button type="button" class="btn btn-info btn-let-me-up" data-toggle="modal" data-target="#let-me-up-modal">我要UP</button>
             <div class="pickup-title-line"></div>

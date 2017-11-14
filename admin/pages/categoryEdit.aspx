@@ -62,5 +62,5 @@
             </asp:Repeater>
         </table>
     </div>
-    <SoftwarePark:Pager ID="Pager" runat="server" DatabaseTable="Article" PageSize="20" SQLCondition="" SQLOrder="ORDER BY StickState DESC, UploadTime DESC" OnPageIndexChanged="Pager_OnPageIndexChanged" />
+    <SoftwarePark:Pager ID="Pager" runat="server" DatabaseTable="Article" PageSize="20" SQLCondition="" SQLOrder="ORDER BY StickState DESC, UploadTime DESC" />
 </asp:Content>

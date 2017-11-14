@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI.WebControls;
@@ -8,8 +6,8 @@ using System.Web.UI.WebControls;
 public partial class admin_pages_categoryEdit : System.Web.UI.Page
 {
     static string selVal = "";
-
     string ClassID, ClassName;
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Role"] == null)
@@ -30,22 +28,20 @@ public partial class admin_pages_categoryEdit : System.Web.UI.Page
                     this.ClassNameTextBox.Text = DAL.SQLHelper.GetObject(strSQL, paras).ToString();
                 }
                 selVal = "WHERE ID IN (SELECT ArticleID FROM ClassMap WHERE ClassID='" + ClassID + "')";
-                DataListBind();
-                selVal = null;
             }
         }
     }
+    protected void Page_LoadComplete(object sender, EventArgs e)
+    {
+        DataListBind();
+    }
+
     //用于绑定DataList控件
     public void DataListBind()
     {
         Pager.SQLCondition = selVal;
         ArticleRepeater.DataSource = Pager.CreatSource();
         ArticleRepeater.DataBind();
-    }
-
-    protected void Pager_OnPageIndexChanged(object sender, EventArgs e)
-    {
-        DataListBind();
     }
 
     public string ReturnClass(int Class)
