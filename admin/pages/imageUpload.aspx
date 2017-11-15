@@ -1,16 +1,31 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/admin/MasterPage.master" AutoEventWireup="true" CodeFile="imageUpload.aspx.cs" Inherits="admin_pages_imageUpload" %>
-<asp:Content ContentPlaceHolderID="head" runat="server">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="imageUpload.aspx.cs" Inherits="admin_pages_imageUpload" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Software Park Admin v1.0</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/webuploader.css" />
     <link rel="stylesheet" href="../css/imageUpload.css" />
-</asp:Content>
-<asp:Content ContentPlaceHolderID="body" runat="server">
-    <div id="uploader" class="wu-example">
-        <!--用来存放item-->
-        <div id="fileList" class="uploader-list"></div>
-        <div id="filePicker" class="text-center">选择图片</div>
-    </div>
-</asp:Content>
-<asp:Content ContentPlaceHolderID="js" runat="server">
+</head>
+
+<body>
+    <form id="BaseForm" runat="server">
+        <div class="container">
+            <div id="uploader" class="wu-example">
+                <!--用来存放item-->
+                <div id="fileList" class="uploader-list"></div>
+                <div id="filePicker" class="text-center">选择图片</div>
+            </div>
+        </div>
+    </form>
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <script src="../js/webuploader.min.js"></script>
     <script type="text/javascript">
         // 图片上传demo
@@ -50,11 +65,11 @@
             // 当有文件添加进来的时候
             uploader.on('fileQueued', function (file) {
                 var $li = $(
-                        '<div id="' + file.id + '" class="file-item thumbnail">' +
-                        '<img>' +
-                        '<div class="info">' + file.name + '</div>' +
-                        '</div>'
-                    ),
+                    '<div id="' + file.id + '" class="file-item thumbnail">' +
+                    '<img>' +
+                    '<div class="info">' + file.name + '</div>' +
+                    '</div>'
+                ),
                     $img = $li.find('img');
 
                 $list.append($li);
@@ -109,4 +124,6 @@
             });
         });
     </script>
-</asp:Content>
+</body>
+
+</html>
