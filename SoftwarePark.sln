@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2008
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SoftwarePark", ".", "{DFD1EB56-606D-4E8B-A774-05048A6759C9}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52914"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\GitHub\SoftwarePark\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52914\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52914"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\GitHub\SoftwarePark\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52914\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52914"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFD1EB56-606D-4E8B-A774-05048A6759C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFD1EB56-606D-4E8B-A774-05048A6759C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3FA1BD3A-BBD0-4C19-B6DD-34F80887CFED}
+	EndGlobalSection
+EndGlobal
