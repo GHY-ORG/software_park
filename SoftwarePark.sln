@@ -7,20 +7,21 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SoftwarePark", ".", "{DFD1E
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_52914"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\GitHub\SoftwarePark\"
+		Debug.AspNetCompiler.PhysicalPath = "..\SoftwarePark\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52914\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_52914"
-		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\GitHub\SoftwarePark\"
+		Release.AspNetCompiler.PhysicalPath = "..\SoftwarePark\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52914\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "52914"
+		SlnRelativePath = "..\SoftwarePark\"
 	EndProjectSection
 EndProject
 Global
