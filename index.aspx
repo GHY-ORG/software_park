@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Master/MasterPage.master" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="index" Title="软件园" %>
 <asp:Content ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" href="/Statics/css/index.min.css?v=20171102" />
+    <link rel="stylesheet" href="/Statics/css/index.min.css?v=20180309" />
 </asp:Content>
 <asp:Content ContentPlaceHolderID="body" runat="server">
     <div class="container-fluid">

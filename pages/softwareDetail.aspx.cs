@@ -45,6 +45,7 @@ public partial class pages_softwareDetail : System.Web.UI.Page
         SoftwareReader.Read();
         SoftwareName = SoftwareReader["Name"].ToString();
         SoftwareEdition = SoftwareReader["Edition"].ToString();
+        SoftwareDownloadNum = SoftwareReader["DownloadNum"].ToString();
         SoftwareIcon = SoftwareReader["Icon"].ToString().Replace(",", "");
         switch (Convert.ToChar(SoftwareReader["Language"].ToString()))
         {

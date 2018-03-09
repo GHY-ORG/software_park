@@ -17,7 +17,7 @@ public class GetDynamic : IHttpHandler {
         if (context.Request.QueryString["searchclass"] != null && context.Request.QueryString["searchcontent"] != null)
         {
             int searchClass = Convert.ToInt32(context.Request.QueryString["searchclass"].ToString());
-            string searchContent = context.Request.QueryString["searchcontent"].ToString();
+            string searchContent = HttpUtility.UrlDecode(context.Request.QueryString["searchcontent"].ToString());
             ListQuery = DynamicInfo.GetDynamicList(start, count, searchContent, searchClass);
         }
         else

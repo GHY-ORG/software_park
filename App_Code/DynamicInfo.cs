@@ -29,7 +29,7 @@ public class DynamicInfo
         }
         else
         {
-            selVal = "AND (ArticleContent='%" + searchContent + "%' OR Title='%" + searchContent + "%')";
+            selVal = "AND (ArticleContent LIKE '%" + searchContent + "%' OR Title LIKE '%" + searchContent + "%')";
         }
         string strSQL = "SELECT TOP " + count + " * FROM Article WHERE State = '1' " + selVal + " AND ID NOT IN(SELECT TOP " + start + " ID FROM Article WHERE State = '1' ORDER BY StickState DESC, UploadTime DESC) ORDER BY StickState DESC, UploadTime DESC";
         SqlDataReader DynamicDataReader = DAL.SQLHelper.GetReader(strSQL);

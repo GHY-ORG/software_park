@@ -66,6 +66,7 @@
 
 .panel-body .panel-dynamic-banner img {
     width: 100%;
+    max-height:215px;
 }
 
 .panel-body .panel-dynamic-content {

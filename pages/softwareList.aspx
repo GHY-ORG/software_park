@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Master/MasterPage.master" AutoEventWireup="true" CodeFile="softwareList.aspx.cs" Inherits="pages_softwareList" Title="软件园·软件" %>
 <%@ Register Src="~/Controls/pager.ascx" TagPrefix="SoftwarePark" TagName="Pager" %>
 <asp:Content ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" href="/Statics/css/softwareList.min.css?v=20171113" />
+    <link rel="stylesheet" href="/Statics/css/softwareList.min.css?v=20180309" />
     <link rel="stylesheet" href="/Statics/css/swiper-3.4.2.min.css" />
 </asp:Content>
 <asp:Content ContentPlaceHolderID="body" runat="server">

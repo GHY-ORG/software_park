@@ -24,6 +24,10 @@
     box-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
 }
 
+.swiper-slide .thumbnail img {
+    width: 150px !important;
+    height: 150px !important;
+}
 .swiper-container {
     padding: 0 50px;
 }

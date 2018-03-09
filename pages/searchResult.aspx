@@ -34,5 +34,5 @@
     </div>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="js" runat="server">
-    <script src="/Statics/js/searchResult.min.js?v=20171102"></script>
+    <script src="/Statics/js/searchResult.min.js?v=20180309"></script>
 </asp:Content>

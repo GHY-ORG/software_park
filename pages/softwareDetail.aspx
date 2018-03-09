@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Master/MasterPage.master" AutoEventWireup="true" CodeFile="softwareDetail.aspx.cs" Inherits="pages_softwareDetail" Title="软件园·软件" %>
 <asp:Content ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" href="/Statics/css/softwareDetail.min.css?v=20171102" />
+    <link rel="stylesheet" href="/Statics/css/softwareDetail.min.css?v=20180309" />
 </asp:Content>
 <asp:Content ContentPlaceHolderID="body" runat="server">
     <section class="softwarepark-breadcrumb">
@@ -126,12 +126,12 @@
                     if (imgSrcArray[i] != "") {
                         if (i == 0) {
                             var $img = $(
-                                '<div class="item active"><img class="img-responsive" src= "' + imgSrcArray[
+                                '<div class="item active"><img src= "' + imgSrcArray[
                                     i] + '" alt= "" /></div>'
                             );
                         } else {
                             var $img = $(
-                                '<div class="item"><img class="img-responsive" src= "' + imgSrcArray[i] +
+                                '<div class="item"><img src= "' + imgSrcArray[i] +
                                 '" alt= "" /></div>'
                             );
                         }

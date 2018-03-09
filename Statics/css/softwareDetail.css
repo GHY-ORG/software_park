@@ -119,3 +119,8 @@
     color: #3d6884;
     font-size: 50px;
 }
+
+#bannerCarouselInner .item >img{
+    width:555px;
+    height:345px;
+}
