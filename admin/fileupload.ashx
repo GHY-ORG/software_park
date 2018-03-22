@@ -17,7 +17,6 @@ public class fileupload : IHttpHandler {
         SaveFile(path);
     }
 
-    //修改
     public static string GetTimeStamp()
     {
         TimeSpan ts = DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0);
@@ -26,7 +25,6 @@ public class fileupload : IHttpHandler {
 
     private void SaveFile(string path)
     {
-        //修改
         string basePath = "~/upload/" + path + "/";
         var name = string.Empty;
         basePath = (basePath.IndexOf("~") > -1) ? HttpContext.Current.Server.MapPath(basePath) :

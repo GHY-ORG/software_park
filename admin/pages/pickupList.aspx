@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="pickupList.aspx.cs" Inherits="admin_pages_pickupList" %>
+﻿﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="pickupList.aspx.cs" Inherits="admin_pages_pickupList" %>
 
 <!DOCTYPE html>
 
@@ -9,8 +9,8 @@
     <title>Software Park Admin v1.0</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Statics/css/normalize.css" />
+    <link rel="stylesheet" href="/Statics/css/bootstrap.min.css" />
 </head>
 
 <body>
@@ -75,8 +75,8 @@
             </ul>
         </div>
     </form>
-    <script src="/js/jquery-3.2.1.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
+    <script src="/Statics/js/jquery-3.2.1.min.js"></script>
+    <script src="/Statics/js/bootstrap.min.js"></script>
 </body>
 
 </html>

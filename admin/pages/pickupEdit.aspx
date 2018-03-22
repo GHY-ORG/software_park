@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="pickupEdit.aspx.cs" Inherits="admin_pages_pickupEdit" %>
+﻿﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="pickupEdit.aspx.cs" Inherits="admin_pages_pickupEdit" %>
 
 <!DOCTYPE html>
 
@@ -9,8 +9,8 @@
     <title>Software Park Admin v1.0</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Statics/css/normalize.css" />
+    <link rel="stylesheet" href="/Statics/css/bootstrap.min.css" />
     <link href="../css/pickupEdit.css" rel="stylesheet" />
 </head>
 
@@ -104,8 +104,8 @@
             </div>
         </div>
     </form>
-    <script src="/js/jquery-3.2.1.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
+    <script src="/Statics/js/jquery-3.2.1.min.js"></script>
+    <script src="/Statics/js/bootstrap.min.js"></script>
     <script type="text/javascript">
         function appendImg(parentElement, imgSrc) {
             var imgSrcArray = imgSrc.split(",");
